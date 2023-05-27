@@ -1,0 +1,332 @@
+$white: #ffffff;
+$black: #000000;
+$primary1: #f7444e;
+$primary2: #002c3e;
+$textCol: #1f1f1f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container-layout {
+  padding: 0 60px;
+  margin: 0 auto;
+}
+.heading {
+  color: #ebeced;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 800;
+}
+ul {
+  list-style: none;
+}
+
+//Start Header Section
+
+header {
+  padding: 15px;
+  background-color: $white;
+  .container-layout {
+    // background-color: rgb(162, 125, 125);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      font-size: 18px;
+      text-decoration: none;
+      color: $primary2;
+      text-shadow: 1px 1px 2px rgb(0, 0, 0);
+      text-transform: uppercase;
+    }
+    .nav-links {
+      position: relative;
+      padding: 6px 0;
+      .icon-nav {
+        width: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        span {
+          background-color: #333;
+          margin-bottom: 5px;
+          height: 3px;
+        }
+        span:first-child {
+          width: 100%;
+        }
+        span:nth-child(2) {
+          width: 60%;
+        }
+        span:last-child {
+          width: 100%;
+        }
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f6f6;
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 15px);
+        display: none;
+        z-index: 1;
+
+        li a {
+          display: block;
+          padding: 15px;
+          text-decoration: none;
+          color: #333;
+          transition: 0.3s;
+          &:hover {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.showLinks {
+  display: block !important;
+}
+//End Header Section
+// Start Landing Page
+.landing {
+  background-image: url(./images/main-section.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  height: calc(100vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .intro-text {
+    padding: 15px;
+    text-align: center;
+    width: 600px;
+    max-width: 100%;
+    h1 {
+      font-size: 40px;
+      font-weight: 600;
+      color: $white;
+    }
+    p {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.8;
+      color: #f6f6f6;
+      span {
+        color: $primary1;
+      }
+    }
+  }
+}
+// End Landing Page
+
+// Start Services
+.features {
+  padding: 40px 0;
+  background-color: $white;
+
+  .features-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 18px;
+    .feature-wrapper {
+      background-color: #002c3e;
+      border-radius: 5px;
+
+      padding: 20px;
+      text-align: center;
+      transition: 0.7s ease;
+      i {
+        color: #8d3b3b;
+        font-size: 40px;
+      }
+      h3 {
+        color: $white;
+        margin: 30px 0;
+        font-weight: 800;
+        line-height: 1.6;
+      }
+      p {
+        color: $white;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+// End Services
+// Start Services
+.services {
+  padding: 40px 0;
+  background-color: $primary1;
+  h2 {
+    padding-bottom: 35px;
+  }
+  .services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 18px;
+    .service-wrapper {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      transition: 0.7s ease;
+      border: 2px solid $primary2;
+      border-radius: 5px;
+
+      i {
+        color: #8d3b3b;
+        font-size: 40px;
+      }
+      h3 {
+        color: $primary1;
+        margin: 30px 0;
+        font-weight: 800;
+        line-height: 1.6;
+      }
+      p {
+        color: $textCol;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+// End Services
+// Start Portofolio
+.portofolio {
+  padding: 40px 0;
+  background-color: $white;
+  h2 {
+    padding-bottom: 35px;
+  }
+  .portofolio-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 18px;
+
+    .card {
+      background-color: #e6cdcd;
+      border-radius: 8px;
+      img {
+        width: 100%;
+      }
+      .info {
+        padding: 12px;
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          line-height: 1.6;
+          margin-bottom: 15px;
+        }
+        a {
+          text-decoration: none;
+          background-color: #002c3e;
+          border-radius: 8px;
+          padding: 6px 10px;
+          color: $white;
+          transition: 0.7s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// About
+.about {
+  background-color: $primary1;
+  margin-top: 50px;
+  .about-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .image-about {
+      img {
+        width: 100%;
+      }
+    }
+    .info {
+      // width: 100%;
+      max-width: 400px;
+      color: $primary2;
+      padding: 15px;
+      h2 {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $white;
+      }
+      h3 {
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: $white;
+      }
+      p {
+        font-size: 22pxpx;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: $white;
+      }
+    }
+  }
+}
+// footer
+footer {
+  background-color: #002c3e;
+  .footer-wrapper {
+    background-color: #cfdfe5;
+    text-align: center;
+    padding-top: 20px;
+    p {
+      font-size: 22px;
+      font-weight: 600px;
+    }
+    i {
+      padding: 10px;
+      font-size: 25px;
+    }
+  }
+}
+// Responsive\
+// Extra Small
+@media (min-width: 576px) {
+}
+// Small
+@media (min-width: 768px) {
+  .container-layout {
+    width: 730px;
+  }
+}
+// Mediam
+@media (min-width: 992px) {
+  .container-layout {
+    width: 960px;
+  }
+}
+// Large
+@media (min-width: 1200px) {
+  .container-layout {
+    width: 1170px;
+  }
+}
